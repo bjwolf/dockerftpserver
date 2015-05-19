@@ -9,7 +9,7 @@
 
 
 FROM ubuntu:14.04
-MAINTAINER Jonas Colmsjö "jonas@gizur.com"
+MAINTAINER Guowei Meng "bjmgw@qq.com"
 
 RUN apt-get update
 RUN apt-get install -y inetutils-ftp nano wget
@@ -73,8 +73,8 @@ RUN echo "10" > /etc/pure-ftpd/conf/MaxClientsNumber
 # Setup users, add as many as needed
 # ----------------------------------
 
-RUN useradd -m -s /bin/bash someone
-RUN echo someone:password |chpasswd
+RUN useradd -m -s /bin/bash ftpuser
+RUN echo ftpuser:password |chpasswd
 
 
 #
